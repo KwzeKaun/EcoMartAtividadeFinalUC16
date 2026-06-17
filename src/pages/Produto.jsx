@@ -14,7 +14,7 @@ function Produto() {
             id: "1",
             nome: "Ecobag",
             preco: 19.90,
-            descricao: "Sacola reutilizável feita com material ecológico.",
+            descricao: "Sacola reutilizável beeeem top, bonita e tals.",
             imagem: ecobag
         },
 
@@ -22,7 +22,7 @@ function Produto() {
             id: "2",
             nome: "Garrafa Reutilizável",
             preco: 8.90,
-            descricao: "Garrafa reutilizável ideal para reduzir o uso de plástico.",
+            descricao: "Garrafa reutilizável muito boa pra fazer plastico queimado pra botar nas costas.",
             imagem: garrafa
         },
 
@@ -30,7 +30,7 @@ function Produto() {
             id: "3",
             nome: "Escova de Bambu",
             preco: 14.90,
-            descricao: "Escova produzida com bambu, uma alternativa sustentável.",
+            descricao: "Escova produzida com bambu, muito boa pra escovar os cabelo.",
             imagem: bambu
         }
 
