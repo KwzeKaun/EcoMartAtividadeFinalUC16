@@ -9,38 +9,71 @@ function Produto() {
     const { id } = useParams()
 
     const produtos = [
+
         {
             id: "1",
             nome: "Ecobag",
-            preco: "R$ 29,90",
-            descricao: "Sacola reutilizável, até o Michael Jackson usou!",
+            preco: 19.90,
+            descricao: "Sacola reutilizável feita com material ecológico.",
             imagem: ecobag
         },
+
         {
             id: "2",
             nome: "Garrafa Reutilizável",
-            preco: "R$ 49,90",
-            descricao: "Garrafa ecológica muito boa pra dar aquela refrescada, né seu fresco!?",
+            preco: 8.90,
+            descricao: "Garrafa reutilizável ideal para reduzir o uso de plástico.",
             imagem: garrafa
         },
+
         {
             id: "3",
             nome: "Escova de Bambu",
-            preco: "R$ 14,90",
-            descricao: "Escova de Bambu, é melhor doq a de plastico.",
+            preco: 14.90,
+            descricao: "Escova produzida com bambu, uma alternativa sustentável.",
             imagem: bambu
         }
+
     ]
 
-    const produto = produtos.find(
-        (produto) => produto.id === id
-    )
+    const produto = produtos.find((produto) => produto.id === id)
+
+    function adicionarCarrinho() {
+
+        const carrinho = JSON.parse(localStorage.getItem("carrinho")) || []
+
+        carrinho.push(produto)
+
+        localStorage.setItem(
+            "carrinho",
+            JSON.stringify(carrinho)
+        )
+
+        alert("Produto adicionado ao carrinho!")
+
+    }
+
+    if (!produto) {
+
+        return (
+
+            <section className="p-10">
+
+                <h1 className="text-2xl text-center">
+                    Produto não encontrado.
+                </h1>
+
+            </section>
+
+        )
+
+    }
 
     return (
 
         <section className="p-10">
 
-            <div className="max-w-md mx-auto bg-white p-4 rounded-lg shadow-md">
+            <div className="max-w-md mx-auto bg-white rounded-lg shadow-md p-6">
 
                 <img
                     src={produto.imagem}
@@ -57,14 +90,22 @@ function Produto() {
                 </p>
 
                 <p className="text-green-600 text-xl font-bold mt-4">
-                    {produto.preco}
+                    R$ {produto.preco.toFixed(2).replace(".", ",")}
                 </p>
+
+                <button
+                    onClick={adicionarCarrinho}
+                    className="w-full bg-green-600 text-white p-3 rounded-lg mt-6 hover:bg-green-700 active:scale-95 transition"
+                >
+                    Adicionar ao Carrinho
+                </button>
 
             </div>
 
         </section>
 
     )
+
 }
 
 export default Produto

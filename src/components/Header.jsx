@@ -21,7 +21,7 @@ function Header() {
                         >
                             Home
                         </Link>
-
+                        
                         <Link
                             to="/carrinho"
                             className="hover:text-green-200"

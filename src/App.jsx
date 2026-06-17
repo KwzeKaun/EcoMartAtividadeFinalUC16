@@ -3,47 +3,47 @@ import { Routes, Route } from "react-router-dom"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 
-
-import Carrinho from "./pages/Carrinho"
 import Home from "./pages/Home"
 import Produto from "./pages/Produto"
-
+import Carrinho from "./pages/Carrinho"
 
 function App() {
-  return (
 
-    <div className="min-h-screen flex flex-col">
+    return (
+
+  <div className="min-h-screen flex flex-col">
 
       <Header />
 
-      <main className="flex-1">
+        <main className="flex-1">
 
-        <Routes>
-          
-          <Route
-          path="/"
-          element={<Home/>}
-          />
+          <Routes>
 
-          <Route
-          path="/produto/:id"
-          element={<Produto/>}
-          />
+              <Route
+                path="/"
+                element={<Home />}
+              />
 
-          <Route
-          path="/carrinho"
-          element={<Carrinho/>}
-          />
+              <Route
+                path="/produto/:id"
+                element={<Produto />}
+              />
 
-        </Routes>
-      </main>
-      <Footer/>
+              <Route
+                path="/carrinho"
+                element={<Carrinho />}
+              />
+
+          </Routes>
+
+        </main>
+
+      <Footer />
+
     </div>
+
   )
+
 }
-
-
-
-
 
 export default App

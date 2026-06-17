@@ -5,6 +5,7 @@ import garrafa from "../assets/garrafa.jpg"
 import bambu from "../assets/bambu.jpg"
 
 function Home() {
+
     return (
 
         <section className="p-10">
@@ -29,6 +30,10 @@ function Home() {
                             Ecobag
                         </h2>
 
+                        <p className="text-center text-green-600 mt-2">
+                            R$ 19,90
+                        </p>
+
                     </div>
 
                 </Link>
@@ -46,6 +51,10 @@ function Home() {
                         <h2 className="text-center mt-4 font-bold">
                             Garrafa Reutilizável
                         </h2>
+
+                        <p className="text-center text-green-600 mt-2">
+                            R$ 8,90
+                        </p>
 
                     </div>
 
@@ -65,6 +74,10 @@ function Home() {
                             Escova de Bambu
                         </h2>
 
+                        <p className="text-center text-green-600 mt-2">
+                            R$ 14,90
+                        </p>
+
                     </div>
 
                 </Link>
@@ -74,6 +87,7 @@ function Home() {
         </section>
 
     )
+
 }
 
 export default Home
