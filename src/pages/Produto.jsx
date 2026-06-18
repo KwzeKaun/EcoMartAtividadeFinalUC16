@@ -53,22 +53,6 @@ function Produto() {
 
     }
 
-    if (!produto) {
-
-        return (
-
-            <section className="p-10">
-
-                <h1 className="text-2xl text-center">
-                    Produto não encontrado.
-                </h1>
-
-            </section>
-
-        )
-
-    }
-
     return (
 
         <section className="p-10">
